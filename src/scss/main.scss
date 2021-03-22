@@ -1,0 +1,221 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Reem+Kufi&family=El+Messiri&display=swap');
+@import './media';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/cover.jpg");
+    background-attachment: fixed;
+    .container {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        .connection {
+            width: 100%;
+            position: absolute;
+            top: -60px;
+            transition: all 1.5s linear;
+            .connection_msg {
+                color: #f2f2f2;
+                font-family: 'Oswald', sans-serif;
+            }
+        }
+        .quran__app {
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            padding: 20px 5px;
+            background-color: #b9b9b93d;
+            border-radius: 15px;
+            .quran-logo {
+                width: 60px;
+                filter: drop-shadow(0 0 3px #000);
+                margin-top: 8px;
+            }
+            #top {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+                z-index: 9;
+                display: none;
+                cursor: pointer;
+                i {
+                    font-size: 1.5rem;
+                    color: #84848394;
+                    filter: drop-shadow(0 0 0 #000);    
+                }
+                        }
+                .quran_list {
+                    width: 100%;
+                    .list_head {
+                        width: 100%;
+                        .surah_details {
+                            display: none;
+                            margin-bottom: 5px;
+                            .surah_name {
+                                font-family: 'El Messiri', sans-serif;
+                                font-size: 2rem;
+                            }
+                            .reciter_name {
+                                font-family: 'Oswald', sans-serif;
+                            }
+                            #reciter_img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                filter: drop-shadow(0 0 3px #000);
+                            }
+                        }
+                        .audio{
+                            width: 100%;
+                            outline: none;
+                            display: none;
+                        }
+                        #search_form{
+                            width: 100%;
+                            margin-bottom: 10px;
+                            display: flex;
+                            #input_contain {
+                                width: 300px;
+                                &:after {
+                                    content: "";
+                                    display: block;
+                                    width: 5%;
+                                    border-bottom: 2px solid #3b3b3b75;
+                                    transition: all .5s ease-in-out;
+                                    margin-top: -8px;
+                                    margin-right: 8px;
+                                }
+                                &:hover:after {
+                                    width: 50%;
+                                }
+                                #search_input{
+                                    width: 100%;
+                                    height: 100px;
+                                    padding-left: 10px;
+                                    border: none;
+                                    outline: none;
+                                    text-align: right;
+                                    margin-right: 10px;
+                                    background-color: transparent;
+                                    font-family: 'Oswald', sans-serif;
+                                    font-size: 2rem;
+                                    color: #353535;
+                                    &::placeholder{
+                                        color: #35353599;
+                                    font-family: 'Oswald', sans-serif;
+                                    font-weight: bold;
+                                    font-size: 1.8rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .surahs_list {
+                        width: 100%;
+                        list-style-type: none;
+                        margin-top: 10px;
+                        display: grid;
+                        grid-template-columns: repeat(4,1fr);
+                        gap: 5px;
+                        .surah_item {
+                            width: 100%;
+                            min-height: 100px;
+                            color: #f2f2f2;
+                            padding: 5px;
+                            text-align: left;
+                            margin-bottom: 8px;
+                            text-align: center;
+                            background-color: #fff8f882;
+                            .arabic_name {
+                                font-family: 'Reem Kufi', sans-serif;
+                                font-size: 3rem;
+                                color: #585858;
+                            }
+                            .english_name {
+                                font-family: 'Oswald', sans-serif;
+                                color: #585858;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                            }
+                            .group_buttons {
+                                width: 150px;
+                                margin-top: 15px;
+                                display: flex;
+                                justify-content: right;
+                                position: relative;
+                                .down_arrow {
+                                    background-color: #ffffffc2;
+                                    padding: 0 3px;
+                                    border-radius: 5px;
+                                    .choose_reciters {
+                                        color: #585858;
+                                        font-family: 'Oswald', sans-serif;
+                                    }
+                                    .fas {
+                                        color: #585858;
+                                        cursor: pointer;
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                                .reciter_group {
+                                    display: none;
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 25px;
+                                    list-style-type: none;
+                                    text-align: right;
+                                    background-color: #ffffffb0;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                    .reciter_item {
+                                        color: #585858;
+                                        background-color: #efefef;
+                                        margin-bottom: 6px;
+                                        padding: 4px;
+                                        font-family: 'Oswald', sans-serif;
+                                        cursor: pointer;
+                                        transition: all .2s linear;
+                                        &:hover {
+                                            color: #efefef;
+                                            background-color: #585858;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+        }
+    }
+
+    .displayAudio {
+        display: flex !important;
+    }
+    .displayDetails {
+        display: block !important;
+    }
+    .displayTopBtn {
+        display: block !important;
+    }
+    .displayReciters {
+        display: block !important;
+    }
+    .isTrue {
+        background-color: #ff00009a;
+        top: 0 !important;
+    }
+    .isFalse {
+        background-color: #00800093;
+        top: -60px !important;
+    }
+}

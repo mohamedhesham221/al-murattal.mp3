@@ -1,0 +1,35 @@
+@media only screen and (max-width: 425px) {
+    .surahs_list {
+        grid-template-columns: repeat(1,1fr) !important;
+
+        .group_buttons {
+        p {
+            font-size: .7rem !important;
+            }
+        }
+        .reciter_item {
+            font-size: .8rem !important;
+        }
+    }
+    
+    #search_input {
+        width: 100% !important;
+        font-size: 1.2rem !important;
+        height: 65px !important;
+        &::placeholder {
+            font-size: 1.1rem !important;
+        }
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .surahs_list {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .surahs_list {
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+}
